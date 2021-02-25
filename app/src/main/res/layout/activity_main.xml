@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_orden"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="85dp"
         android:layout_marginBottom="75dp"
-        android:text="Orden#8"
+        android:text="Orden#0"
         app:layout_constraintBottom_toTopOf="@+id/button20Id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,8 +97,8 @@
         android:layout_marginEnd="68dp"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/textView15Id"
-        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button10Id"
         app:layout_constraintVertical_bias="0.487" />
@@ -110,22 +111,22 @@
         android:layout_marginBottom="13dp"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.339"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button15Id"
-        tools:layout_editor_absoluteX="141dp" />
+        app:layout_constraintVertical_bias="0.333" />
 
     <TextView
         android:id="@+id/textView20Id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
         android:layout_marginTop="13dp"
-        android:layout_marginEnd="36dp"
         android:layout_marginBottom="19dp"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/textView25Id"
-        app:layout_constraintHorizontal_bias="0.033"
-        app:layout_constraintStart_toEndOf="@+id/textView15Id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button20Id"
         app:layout_constraintVertical_bias="0.777" />
 
@@ -137,26 +138,28 @@
         android:layout_marginBottom="22dp"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button25Id"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="278dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView0Id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
         android:text="0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView25Id"
+        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button0Id" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="guarda"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="205dp" />
 
@@ -166,18 +169,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="312dp" />
-
-    <TextView
-        android:id="@+id/textViewSubId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="352dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <TextView
         android:id="@+id/textView8"
@@ -218,12 +209,11 @@
         android:id="@+id/OrderFeeId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSubId" />
+        tools:layout_editor_absoluteY="379dp" />
 
     <TextView
         android:id="@+id/ServiceFeeId"
@@ -257,11 +247,12 @@
         app:layout_constraintGuide_begin="496dp" />
 
     <Button
-        android:id="@+id/compraButton"
+        android:id="@+id/compraButon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:background="#9ACD32"
+        android:onClick="guarda"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -269,5 +260,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/precioUsuario"
+        android:layout_width="161dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:hint="$0.0"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="322dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,18 +2,26 @@ package com.example.ubereats
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    val subtotal = 200
+
+    var subtotal = 200.0
+    var compras = mutableListOf<Compras>()
+    var orderFee = 0.0
+    var serviceFee = 0.0
+    var deliveryFee = 0.0
+    var tip = 0.0
+    var id = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var orderFee = subtotal*0.02
-        var serviceFee = subtotal*0.05
-        var deliveryFee = subtotal*0.1
-        var tip = 0.0
-        textViewSubId.text = subtotal.toDouble().toString()
+        this.subtotal = precioUsuario.text.toString().toDouble()
+        orderFee = subtotal*0.02
+        serviceFee = subtotal*0.05
+        deliveryFee = subtotal*0.1
         textView10Id.text = "$" + (subtotal*0.1).toDouble().toString()
         textView15Id.text = "$" + (subtotal*0.15).toDouble().toString()
         textView20Id.text = "$" + (subtotal*0.2).toDouble().toString()
@@ -47,7 +55,15 @@ class MainActivity : AppCompatActivity() {
     }
     fun calcTotal(orderFee: Double, serviceFee:Double, deliveryFee:Double,tip:Double){
         var total = subtotal + orderFee + serviceFee +deliveryFee + tip
-        compraButton.text = "Pagar $" + total.toString()
+        compraButon.text = "Pagar $" + total.toString()
+    }
+
+    fun guarda(view: View){
+        compraButon.setOnClickListener(){
+            id += 1
+            ordenId.text = "Orden # " + id.toString()
+        }
+        var total = calcTotal(orderFee,serviceFee,deliveryFee,tip)
     }
 
 }
