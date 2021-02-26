@@ -2,6 +2,7 @@ package com.example.ubereats
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,12 +14,12 @@ class MainActivity : AppCompatActivity() {
     var serviceFee = 0.0
     var deliveryFee = 0.0
     var tip = 0.0
-    var id = 0
+    var id = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        this.subtotal = precioUsuario.text.toString().toDouble()
+        //subtotal = precioUsuario.text.toString().toDouble()
         orderFee = subtotal*0.02
         serviceFee = subtotal*0.05
         deliveryFee = subtotal*0.1
@@ -53,9 +54,10 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    fun calcTotal(orderFee: Double, serviceFee:Double, deliveryFee:Double,tip:Double){
+    fun calcTotal(orderFee: Double, serviceFee:Double, deliveryFee:Double,tip:Double): Double {
         var total = subtotal + orderFee + serviceFee +deliveryFee + tip
         compraButon.text = "Pagar $" + total.toString()
+        return total
     }
 
     fun guarda(view: View){
@@ -64,6 +66,9 @@ class MainActivity : AppCompatActivity() {
             ordenId.text = "Orden # " + id.toString()
         }
         var total = calcTotal(orderFee,serviceFee,deliveryFee,tip)
+        val compra = Compras(id, subtotal, orderFee, serviceFee, deliveryFee, total)
+        compras.add(compra)
+        Log.i("com.example.ubereats.Hola", compras.toString())
     }
 
 }
