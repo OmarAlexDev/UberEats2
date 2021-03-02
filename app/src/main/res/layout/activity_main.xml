@@ -5,7 +5,7 @@
     android:id="@+id/id_orden"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9206CF"
+    android:background="#F7F8F7"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,6 +16,7 @@
         android:layout_marginEnd="36dp"
         android:text="Subtotal:"
         android:textAlignment="textStart"
+        android:textColor="#191818"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -29,21 +30,24 @@
         android:layout_height="38dp"
         android:text="Orden # 1"
         android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textColorHint="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintVertical_bias="0.191" />
 
     <Button
         android:id="@+id/button0Id"
         android:layout_width="54dp"
         android:layout_height="53dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="#05FAB5"
+        android:backgroundTint="#3FD145"
         android:text="0%"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
@@ -54,8 +58,9 @@
         android:layout_width="54dp"
         android:layout_height="53dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="#05FAB5"
+        android:backgroundTint="#3FD145"
         android:text="20%"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -65,8 +70,10 @@
         android:layout_width="54dp"
         android:layout_height="53dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="#05FAB5"
+        android:backgroundTint="#3FD145"
         android:text="10%"
+        android:textColorHighlight="#43A047"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
@@ -77,8 +84,9 @@
         android:layout_width="54dp"
         android:layout_height="53dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="#05FAB5"
+        android:backgroundTint="#3FD145"
         android:text="15%"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.274"
@@ -89,8 +97,9 @@
         android:layout_width="58dp"
         android:layout_height="53dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="#05FAB5"
+        android:backgroundTint="#3FD145"
         android:text="25%"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="@+id/button0Id"
         app:layout_constraintHorizontal_bias="0.774"
@@ -117,7 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="263dp" />
+        app:layout_constraintGuide_begin="271dp" />
 
     <TextView
         android:id="@+id/textView8"
@@ -125,12 +134,13 @@
         android:layout_height="29dp"
         android:text="Small Order Fee"
         android:textAlignment="textStart"
+        android:textColor="#191818"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.418" />
 
     <TextView
         android:id="@+id/textView9"
@@ -138,45 +148,51 @@
         android:layout_height="25dp"
         android:text="Service Fee"
         android:textAlignment="textStart"
+        android:textColor="#191818"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.647" />
+        app:layout_constraintVertical_bias="0.625" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="120dp"
-        android:layout_height="35dp"
+        android:layout_width="121dp"
+        android:layout_height="34dp"
         android:text="Delivery Fee"
         android:textAlignment="textStart"
+        android:textColor="#191818"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.889" />
+        app:layout_constraintVertical_bias="0.898" />
 
     <TextView
         android:id="@+id/OrderFeeId"
-        android:layout_width="230dp"
-        android:layout_height="33dp"
-        android:text="$0.0"
+        android:layout_width="225dp"
+        android:layout_height="26dp"
+        android:text="$0.00"
+        android:textColorHighlight="#31D138"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.404" />
+        app:layout_constraintVertical_bias="0.411" />
 
     <TextView
         android:id="@+id/ServiceFeeId"
         android:layout_width="229dp"
         android:layout_height="29dp"
-        android:text="$0.0"
+        android:text="$0.00"
+        android:textColorHighlight="#31D138"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
@@ -188,7 +204,9 @@
         android:id="@+id/DeliveryFeeId"
         android:layout_width="234dp"
         android:layout_height="29dp"
-        android:text="$0.0"
+        android:text="$0.00"
+        android:textColorHighlight="#31D138"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -200,14 +218,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="464dp" />
+        app:layout_constraintGuide_begin="494dp" />
 
     <Button
         android:id="@+id/compraButon"
-        android:layout_width="223dp"
-        android:layout_height="38dp"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
         android:layout_marginTop="44dp"
-        android:background="@android:drawable/button_onoff_indicator_on"
+        android:background="#2CB131"
         android:onClick="guarda"
         android:text="Pagar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -215,22 +233,28 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <EditText
         android:id="@+id/precioUsuario"
         android:layout_width="236dp"
         android:layout_height="37dp"
         android:ems="10"
-        android:hint="$0.0"
-        android:inputType="textPersonName"
+        android:hint="$0.00"
+        android:inputType="number|textPersonName"
+        android:outlineAmbientShadowColor="#31D138"
+        android:outlineSpotShadowColor="#31D138"
+        android:shadowColor="#31D138"
+        android:textColor="#000000"
+        android:textColorHighlight="#31D138"
+        android:textColorLink="#31D138"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.134" />
 
     <TextView
         android:id="@+id/textView"
@@ -238,7 +262,7 @@
         android:layout_height="wrap_content"
         android:text="UberEats"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#1C8520"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

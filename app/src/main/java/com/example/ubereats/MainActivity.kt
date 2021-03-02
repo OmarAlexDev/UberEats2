@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     var serviceFee = 0.0
     var deliveryFee = 0.0
     var tip = 0.0
-    var id = 0
+    var id = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,9 +80,9 @@ class MainActivity : AppCompatActivity() {
         val compra = Compras(id, subtotal, orderFee, serviceFee, deliveryFee, total)
         compras.add(compra)
         precioUsuario.text.clear()
-        OrderFeeId.text = "$0.0"
-        ServiceFeeId.text = "$0.0"
-        DeliveryFeeId.text = "$0.0"
+        OrderFeeId.text = "$0.00"
+        ServiceFeeId.text = "$0.00"
+        DeliveryFeeId.text = "$0.00"
         compraButon.text = "Pagar"
         subtotal = 0.0
         orderFee = 0.0
