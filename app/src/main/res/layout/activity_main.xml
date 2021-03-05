@@ -2,272 +2,273 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_orden"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7F8F7"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/subtotald"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
+        android:layout_width="101dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
         android:text="Subtotal:"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="textStart"
+        android:textColor="#191818"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.068" />
+        app:layout_constraintVertical_bias="0.099" />
 
     <TextView
         android:id="@+id/ordenId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
-        android:layout_marginBottom="75dp"
-        android:text="Orden#8"
-        app:layout_constraintBottom_toTopOf="@+id/button20Id"
+        android:layout_width="196dp"
+        android:layout_height="38dp"
+        android:text="Orden # 1"
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textColorHint="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191" />
 
     <Button
         android:id="@+id/button0Id"
         android:layout_width="54dp"
         android:layout_height="53dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#3FD145"
         android:text="0%"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button20Id"
         android:layout_width="54dp"
         android:layout_height="53dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#3FD145"
         android:text="20%"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/button25Id" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button10Id"
         android:layout_width="54dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#3FD145"
         android:text="10%"
+        android:textColorHighlight="#43A047"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/button15Id"
-        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button15Id"
         android:layout_width="54dp"
         android:layout_height="53dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#3FD145"
         android:text="15%"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/button20Id" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button25Id"
         android:layout_width="58dp"
         android:layout_height="53dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#3FD145"
         android:text="25%"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/button0Id" />
+        app:layout_constraintEnd_toEndOf="@+id/button0Id"
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"
-        app:constraint_referenced_ids="button20Id,button25Id,button10Id,button0Id,button15Id,textView20Id,textView10Id,textView0Id"
+        app:constraint_referenced_ids="button20Id,button25Id,button10Id,button0Id,button15Id"
         tools:layout_editor_absoluteY="731dp" />
-
-    <TextView
-        android:id="@+id/textView10Id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/textView15Id"
-        app:layout_constraintHorizontal_bias="0.938"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10Id"
-        app:layout_constraintVertical_bias="0.487" />
-
-    <TextView
-        android:id="@+id/textView15Id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="13dp"
-        android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/button15Id"
-        tools:layout_editor_absoluteX="141dp" />
-
-    <TextView
-        android:id="@+id/textView20Id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="19dp"
-        android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/textView25Id"
-        app:layout_constraintHorizontal_bias="0.033"
-        app:layout_constraintStart_toEndOf="@+id/textView15Id"
-        app:layout_constraintTop_toBottomOf="@+id/button20Id"
-        app:layout_constraintVertical_bias="0.777" />
-
-    <TextView
-        android:id="@+id/textView25Id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="22dp"
-        android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/button25Id"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="278dp" />
-
-    <TextView
-        android:id="@+id/textView0Id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="40dp"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView25Id"
-        app:layout_constraintTop_toBottomOf="@+id/button0Id" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="guarda"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="205dp" />
+        app:layout_constraintGuide_begin="146dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="312dp" />
-
-    <TextView
-        android:id="@+id/textViewSubId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="352dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintGuide_begin="271dp" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="130dp"
+        android:layout_height="29dp"
         android:text="Small Order Fee"
+        android:textAlignment="textStart"
+        android:textColor="#191818"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtotald" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.418" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="117dp"
+        android:layout_height="25dp"
         android:text="Service Fee"
+        android:textAlignment="textStart"
+        android:textColor="#191818"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.625" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="121dp"
+        android:layout_height="34dp"
         android:text="Delivery Fee"
+        android:textAlignment="textStart"
+        android:textColor="#191818"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.898" />
 
     <TextView
         android:id="@+id/OrderFeeId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:layout_width="225dp"
+        android:layout_height="26dp"
+        android:text="$0.00"
+        android:textColorHighlight="#31D138"
+        android:textColorLink="#31D138"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSubId" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.411" />
 
     <TextView
         android:id="@+id/ServiceFeeId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:layout_width="229dp"
+        android:layout_height="29dp"
+        android:text="$0.00"
+        android:textColorHighlight="#31D138"
+        android:textColorLink="#31D138"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/OrderFeeId" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.641" />
 
     <TextView
         android:id="@+id/DeliveryFeeId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
+        android:layout_width="234dp"
+        android:layout_height="29dp"
+        android:text="$0.00"
+        android:textColorHighlight="#31D138"
+        android:textColorLink="#31D138"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/ServiceFeeId"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.869" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="496dp" />
+        app:layout_constraintGuide_begin="494dp" />
 
     <Button
-        android:id="@+id/compraButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/compraButon"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
         android:layout_marginTop="44dp"
-        android:background="#9ACD32"
-        android:text="Button"
+        android:background="#2CB131"
+        android:onClick="guarda"
+        android:text="Pagar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.036" />
+
+    <EditText
+        android:id="@+id/precioUsuario"
+        android:layout_width="236dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:hint="$0.00"
+        android:inputType="number|textPersonName"
+        android:outlineAmbientShadowColor="#31D138"
+        android:outlineSpotShadowColor="#31D138"
+        android:shadowColor="#31D138"
+        android:textColor="#000000"
+        android:textColorHighlight="#31D138"
+        android:textColorLink="#31D138"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UberEats"
+        android:textAlignment="center"
+        android:textColor="#1C8520"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
