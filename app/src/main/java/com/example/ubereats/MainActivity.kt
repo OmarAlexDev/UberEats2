@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     var serviceFee = 0.0
     var deliveryFee = 0.0
     var tip = 0.0
-    var id = 1
+    var id = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
