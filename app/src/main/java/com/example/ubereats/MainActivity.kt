@@ -1,5 +1,6 @@
 package com.example.ubereats
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.service.autofill.Validators.not
@@ -79,6 +80,16 @@ class MainActivity : AppCompatActivity() {
         var total = calcTotal(orderFee,serviceFee,deliveryFee,tip)
         val compra = Compras(id, subtotal, orderFee, serviceFee, deliveryFee, total)
         compras.add(compra)
+
+            val intento = Intent(this, Resultado::class.java)
+            intento.putExtra("id",id)
+            intento.putExtra("subtotal",subtotal)
+            intento.putExtra("orderFee",orderFee)
+            intento.putExtra("serviceFee",serviceFee)
+            intento.putExtra("deliveryFee",deliveryFee)
+            intento.putExtra("total",total)
+            startActivity(intento)
+
         precioUsuario.text.clear()
         OrderFeeId.text = "$0.00"
         ServiceFeeId.text = "$0.00"
@@ -89,6 +100,7 @@ class MainActivity : AppCompatActivity() {
         serviceFee = 0.0
         deliveryFee = 0.0
         Log.i("com.example.ubereats.Hola", compras.toString())
+
     }
 
 }
