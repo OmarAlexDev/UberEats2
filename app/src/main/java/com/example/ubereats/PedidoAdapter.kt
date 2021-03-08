@@ -20,10 +20,10 @@ class PedidoAdapter (private val compras: List<Compras>):RecyclerView.Adapter<Pe
 
     override fun onBindViewHolder(holder: PedidoViewHolder, position: Int) {
         val dato  = compras[position]
-        val total=dato.total
+        val total = dato.total
         val pedido = dato.id
-        holder.pedido.text = dato.id.toString()
-        holder.total.text= dato.total.toString()
+        holder.pedido.text = "Pedido # " + dato.id.toString()
+        holder.total.text= "Total pagado: $" + dato.total.toString()
     }
 
     override fun getItemCount(): Int {

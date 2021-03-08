@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     var serviceFee = 0.0
     var deliveryFee = 0.0
     var tip = 0.0
-    var id = 0
+    var id = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,10 +75,10 @@ class MainActivity : AppCompatActivity() {
         return total
     }
     fun guarda(view: View){
-        id += 1
-        ordenId.text = "Orden # " + id.toString()
         var total = calcTotal(orderFee,serviceFee,deliveryFee,tip)
         val compra = Compras(id, subtotal, orderFee, serviceFee, deliveryFee, total)
+        id += 1
+        ordenId.text = "Orden # " + id.toString()
         compras.add(compra)
 
             val intento = Intent(this, Resultado::class.java)
@@ -100,7 +100,6 @@ class MainActivity : AppCompatActivity() {
         serviceFee = 0.0
         deliveryFee = 0.0
         Log.i("com.example.ubereats.Hola", compras.toString())
-
     }
 
 }
