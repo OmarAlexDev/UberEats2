@@ -7,25 +7,25 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_resultado.*
 import kotlin.random.Random
 
+
 class Resultado : AppCompatActivity() {
     private lateinit var pedidoAdapter: PedidoAdapter
-    private lateinit var compras: ArrayList<Compras>
+    var compras = mutableListOf<Compras>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado)
         initRecycler()
     }
     fun initRecycler(){
-        compras=ArrayList<Compras>()
         pedidoAdapter = PedidoAdapter(compras)
         recycler.layoutManager= LinearLayoutManager(this)
         recycler.adapter = pedidoAdapter
-        for(i in 0..5){
-            val total = String.format("%.2f", Random.nextDouble()*100).toDouble()
-            //val id = String.format("%.2f", Random.nextInt()).toInt()
-            val compra = Compras(0,0.0,0.0,0.0,0.0,total)
+        for(i in 0..20){
+            val total = String.format("%.2f", Random.nextDouble()*1000).toDouble()
+            val compra = Compras(i+1,0.0,0.0,0.0,0.0, total)
             compras.add(compra)
         }
+
 
     }
 }
